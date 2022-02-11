@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llTab"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnTab1"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Mon"-->
+        <!--            android:textColor="@color/colorWhite" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnTab2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Tue"-->
+        <!--            android:textColor="@color/colorWhite" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnTab3"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Wed"-->
+        <!--            android:textColor="@color/colorWhite" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnTab4"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Thur"-->
+        <!--            android:textColor="@color/colorWhite" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnTab5"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Fri"-->
+        <!--            android:textColor="@color/colorWhite" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnTab6"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Sat"-->
+        <!--            android:textColor="@color/colorWhite" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnTab7"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorPrimaryDark"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Sun"-->
+        <!--            android:textColor="@color/colorWhite" />-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/img_weather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llTab" />
+
+    <TextView
+        android:id="@+id/tvCelsius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="37°c"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="58dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Light Cloud"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCelsius" />
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Mon Aug 9, 2021"
+        android:textColor="@color/colorBlack"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tvText" />
+
+    <LinearLayout
+        android:id="@+id/llButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDay">
+
+        <Button
+            android:id="@+id/Humidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="Humidity"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/Predic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Predictability"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
